@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import QRCode from "qrcode";
 import { toast } from "react-toastify";
-import styles from "./QRCodeModal.module.css";
+import styles from "./qrCodeModal.module.css";
 
 const QRCodeModal = ({ onClose, assets }) => {
   const [qrCodes, setQrCodes] = useState([]);
