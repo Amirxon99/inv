@@ -4,8 +4,8 @@ frontend/node_modules/
 backend/node_modules/
 
 # Build natijalari
-frontend/dist/
-frontend/build/
+#frontend/dist/
+#frontend/build/
 backend/dist/
 out/
 

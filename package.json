@@ -1,11 +1,9 @@
 {
   "name": "asset-system-monolith",
   "version": "1.0.0",
-  "scripts": {
-    "install-all": "npm install --prefix backend && npm install --prefix frontend",
-    "build": "cd frontend && npm install && npm run build",
-    "migrate": "npx knex migrate:latest --knexfile backend/knexfile.js --env production",
-    "start": "node backend/server.js",
-   "render-deploy": "npm run build && npm run migrate && node backend/scripts/seed-excel.js"
-  }
+"scripts": {
+  "install-all": "npm install --prefix backend && cd frontend && npm install",
+  "render-deploy": "npm install --prefix backend && npx knex migrate:latest --knexfile backend/knexfile.js",
+  "start": "node backend/server.js"
+}
 }
