@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axiosInstance from "../../../api/axiosInstanse";
 import { logoutLocal } from "../../../store/slices/authSlice";
 
-import styles from "./Sidebar.module.css";
+import styles from "./sidebar.module.css";
 import {
   Home,
   Building,
