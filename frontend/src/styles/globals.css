@@ -1,0 +1,47 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("../assets/fonts/golos-text-v7-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../assets/fonts/golos-text-v7-latin-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  src: url("../assets/fonts/golos-text-v7-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Golos Text', sans-serif !important;
+  background-color: #f6f8fb;
+  color: #333;
+}
+
+.mode-grayscale {
+  filter: grayscale(1);
+}
+
+.mode-dimmed {
+  filter: brightness(0.5)  ;
+}
+
+.mode-normal {
+  filter: none;
+}

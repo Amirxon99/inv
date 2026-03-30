@@ -1,0 +1,13 @@
+{
+  "title": "Draft Laws Submitted to the Legislative Chamber",
+  "kelib_tushgan": "Submitted",
+  "korib_chiqilgan": "Reviewed",
+  "birinchi_oqish": "1st Reading",
+  "ikkinchi_oqish": "2nd Reading",
+  "uchinchi_oqish": "3rd Reading",
+  "muddat_yaqinlashgan": "Deadline Approaching",
+  "kengashda_qaytarilgan": "Returned by the Council",
+  "rad_etilgan": "Rejected",
+  "senatga_yuborilgan": "Sent to the Senate",
+  "senatdan_qaytarilgan": "Returned from the Senate"
+}

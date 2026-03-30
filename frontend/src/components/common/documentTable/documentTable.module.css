@@ -1,0 +1,112 @@
+.wrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 6px 20px rgba(11,99,214,0.03);
+  border: 1px solid #eef3fb;
+}
+
+/* top info */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 6px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 14px 12px;
+  font-weight: 600;
+  color: #0b63d6;
+  border-bottom: 1px solid #f1f5f9;
+  background: linear-gradient(180deg, rgba(11,99,214,0.03), rgba(255,255,255,0));
+}
+
+.table tbody td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #f5f7fb;
+  vertical-align: middle;
+  color: #334155;
+}
+
+/* badge for document number */
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #eef7ff;
+  color: #0b63d6;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(11,99,214,0.06);
+}
+
+/* organization column smaller */
+.org {
+  max-width: 220px;
+  white-space: normal;
+}
+
+/* summary */
+.summary {
+  max-width: 240px;
+  color: #475569;
+}
+
+/* statuses */
+.status {
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 13px;
+}
+.progress { background: #fff7ed; color: #ff8a00; border: 1px solid rgba(255,138,0,0.08); }
+.done { background: #ecfdf5; color: #059669; border: 1px solid rgba(5,150,105,0.06); }
+.rejected { background: #fff1f2; color: #be123c; border: 1px solid rgba(190,18,60,0.05); }
+
+/* pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+}
+
+.nav, .pageBtn {
+  border: none;
+  background: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #334155;
+  box-shadow: 0 2px 6px rgba(12,74,175,0.02);
+}
+
+.pageBtn.active {
+  background: linear-gradient(90deg,#6b46ff,#0b63d6);
+  color: white;
+  box-shadow: 0 6px 18px rgba(11,99,214,0.12);
+}
+
+.ellipsis {
+  color: #94a3b8;
+  padding: 0 6px;
+  font-size: 16px;
+}
+
+.empty {
+  text-align: center;
+  padding: 24px;
+  color: #64748b;
+}

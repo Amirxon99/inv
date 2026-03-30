@@ -1,0 +1,43 @@
+# Dependency papkalari
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build natijalari
+frontend/dist/
+frontend/build/
+backend/dist/
+out/
+
+# Maxfiy ma'lumotlar (⚠️ JUDA MUHIM)
+.env
+*.env
+.env.local
+.env.production
+backend/.env
+frontend/.env
+
+# Ma'lumotlar bazasi fayllari (agar sqlite ishlatilsa)
+*.sqlite
+*.db
+
+# Loglar va vaqtinchalik fayllar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Operatsion tizim fayllari
+.DS_Store
+Thumbs.db
+
+# IDE sozlamalari
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Kesh fayllari
+.eslintcache
+.stylelintcache

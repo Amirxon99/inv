@@ -1,0 +1,244 @@
+/* ==========================================================================
+   ASOSIY SIDEBAR KONTEYNERI (PC & UMUMIY)
+   ========================================================================== */
+.sidebar {
+  background-color: #0057b8;
+  color: #ffffff;
+  width: 280px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s ease;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar yopilgandagi holati (PC uchun) */
+.closed {
+  width: 70px;
+}
+
+/* ==========================================================================
+   TUGMALAR (BUTTONS)
+   ========================================================================== */
+
+/* ➡️ 1. O'NGGA-CHAPGA KIRADIGAN TUGMA (PC VERSIYA) */
+.toggleBtn {
+  /* Standart tugma stillarini tozalash */
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Ranglar va Shakl */
+  background-color: #ffffff !important; /* Oq fon */
+  color: #0057b8 !important;            /* Ko'k belgi */
+  border: 1px solid #0057b8;
+  border-radius: 50% !important;
+  
+  /* Pozitsiya va Hajm */
+  position: absolute;
+  top: 25px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  
+  /* Markazlashtirish */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1010;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.toggleBtn:hover {
+  background-color: #f0f4ff !important;
+  transform: scale(1.1);
+}
+
+/* 🍔 2. MOBIL TOGGLE (HAMBURGER MENU TUGMASI) */
+.mobileToggle {
+  display: none; /* Kompyuterda yashirin */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ==========================================================================
+   MENU ELEMENTLARI
+   ========================================================================== */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 70px 10px 0 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ✅ Aktiv ota-menyu (Sariq hoshiya bilan) */
+.activeParent {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.activeParent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #ffd700; /* Sariq chiziq */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.chevron {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* Submenu elementlari */
+.subItem {
+  padding: 10px 10px 10px 48px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #cbd5e1;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.subItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.activeChild {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   PASTKI QISM (BOTTOM)
+   ========================================================================== */
+.bottom {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact, .logout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+  color: #ffffff;
+}
+
+.contact:hover, .logout:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   📱 📱 📱 RESPONSIVE (MOBILE) - 768PX DAN KICHIK
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Mobil tugma stilini faollashtirish */
+  .mobileToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    
+    background-color: #0057b8 !important; /* Ko'k fon */
+    color: #ffffff !important;           /* Oq ikonka */
+    width: 46px;
+    height: 46px;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    padding: 0;
+  }
+
+  /* Sidebar polniy ekran holati */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important; /* To'liq ekran kengligi */
+    height: 100vh;
+    max-width: 100%;
+    transform: translateX(-100%); /* Boshida yashirin */
+    border-radius: 0;
+    z-index: 1050;
+  }
+
+  /* Sidebar ochilganda (React'dan klass qo'shiladi) */
+  .mobileOpen {
+    transform: translateX(0);
+  }
+
+  /* PC tugmasini mobilda butunlay yo'qotish */
+  .toggleBtn {
+    display: none !important;
+  }
+
+  .menu {
+    padding-top: 90px; /* Hamburger tugmasi ostiga tushishi uchun */
+  }
+
+  .item {
+    padding: 16px 20px;
+    font-size: 18px; /* Mobilda kattaroq matn */
+  }
+
+  .subItem {
+    padding: 14px 10px 14px 60px;
+    font-size: 16px;
+  }
+
+  /* Overlay (Orqa fon xiralashishi) */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1040;
+  }
+}

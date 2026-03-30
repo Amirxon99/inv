@@ -1,0 +1,144 @@
+.wrapper {
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px !important;
+  background-color: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
+}
+
+.header {
+  text-align: center;
+}
+
+.qrIcon {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.infoItem span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.statusBadge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Status ranglari */
+.active { background: #dcfce7; color: #166534; }
+.new { background: #e0f2fe; color: #0369a1; }
+.repair { background: #fef3c7; color: #92400e; }
+.not_found { background: #fee2e2; color: #991b1b; }
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700 !important;
+  color: #1e293b;
+  margin-bottom: 20px !important;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #475569;
+}
+
+.updateBtn {
+  margin-top: 10px;
+  background-color: #3b82f6 !important;
+  padding: 12px !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.guestPanel {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.lockBox {
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.lockBox svg {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.loginBtn {
+  border-radius: 10px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  border-color: #3b82f6 !important;
+  color: #3b82f6 !important;
+}
+
+.centered {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 10px;
+  }
+  .container {
+    padding: 20px;
+    border-radius: 0px !important; /* Mobil qurilmalarda to'liq ekran ko'rinishi uchun */
+    box-shadow: none !important;
+    background: transparent;
+  }
+  .header h2 {
+    font-size: 1.25rem;
+  }
+}

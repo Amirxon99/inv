@@ -1,0 +1,137 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50px;
+  transition: background 0.2s;
+}
+
+.trigger:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #eef2ff;
+  border-radius: 50%;
+  color: #1f4fbf;
+  overflow: hidden;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 500;
+  color: #1f4fbf;
+  font-size: 0.95rem;
+}
+
+/* PANEL (DROPDOWN) */
+.panel {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 14rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #edf2f7;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Panel ichidagi ism (faqat mobilda chiqishi uchun) */
+.userInfoMobile {
+  display: none; /* Kompyuterda yashirin */
+  padding: 1rem;
+  background: #f8faff;
+}
+
+.mobileFullName {
+  margin: 0;
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+}
+
+.mobileEmail {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.list {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #4a5568;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.item:hover {
+  background: #f7fafc;
+  color: #1f4fbf;
+}
+
+.logout {
+  color: #e53e3e;
+}
+
+.logout:hover {
+  background: #fff5f5;
+  color: #c53030;
+}
+
+.divider {
+  height: 1px;
+  background: #edf2f7;
+  margin: 0.5rem 0;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  /* 1. Navbardagi ismni yashirish */
+  .name {
+    display: none;
+  }
+
+  /* 2. Panel ichidagi ismni ko'rsatish */
+  .userInfoMobile {
+    display: block;
+  }
+
+  .trigger {
+    padding: 0.25rem; /* Mobilda tugmani kichraytirish */
+  }
+
+  .panel {
+    width: 12rem;
+    right: -10px; /* Ekrandan chiqib ketmasligi uchun */
+  }
+}

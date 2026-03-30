@@ -1,0 +1,13 @@
+{
+  "title": "Законопроекты, поступившие в Законодательную палату",
+  "kelib_tushgan": "Поступило",
+  "korib_chiqilgan": "Рассмотрено",
+  "birinchi_oqish": "Первое чтение",
+  "ikkinchi_oqish": "Второе чтение",
+  "uchinchi_oqish": "Третье чтение",
+  "muddat_yaqinlashgan": "Срок истекает",
+  "kengashda_qaytarilgan": "Возвращено Советом",
+  "rad_etilgan": "Отклонено",
+  "senatga_yuborilgan": "Отправлено в Сенат",
+  "senatdan_qaytarilgan": "Возвращено из Сената"
+}

@@ -1,0 +1,43 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f7f9fc;
+  overflow: hidden; /* Asosiy oyna qimirlab ketmasligi uchun */
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Flex element ichidagi kontent sig'may qolsa, ekranni buzmasligi uchun */
+  position: relative;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Faqat kontent qismi skroll bo'ladi, Navbar joyida turadi */
+  background-color: #f7f9fc;
+}
+
+/* 📱 Mobil qurilmalar uchun moslashtirish (768px va undan kichik) */
+@media (max-width: 768px) {
+  .layout {
+    /* Mobilda Sidebar Navbar ustiga chiqishi uchun block ishlatamiz */
+    display: block; 
+    position: relative;
+  }
+
+  .main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 15px;
+    /* Navbar balandligiga qarab padding berish mumkin, 
+       agar Navbar fixed bo'lsa */
+  }
+}

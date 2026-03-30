@@ -1,0 +1,83 @@
+.wrapper {
+  padding: 20px;
+  background: #f4f6f9;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card span {
+  font-size: 14px;
+  color: gray;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.chartCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tableCard {
+  background: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tableCard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableCard th,
+.tableCard td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.alertBox {
+  margin-top: 20px;
+  background: #ffe5e5;
+  color: #b91c1c;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.loader {
+  padding: 40px;
+  text-align: center;
+}
