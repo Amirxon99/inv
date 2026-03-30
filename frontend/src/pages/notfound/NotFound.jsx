@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import styles from "./NotFound.module.css";
+import styles from "./notFound.module.css";
 
 function NotFound() {
   const navigate = useNavigate();
