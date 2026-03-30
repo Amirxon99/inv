@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./assetCategoriesModal.module.css";
+import styles from "./assetcategoriesModal.module.css";
 import axiosInstance from "../../../../api/axiosInstanse";
 import { toast } from "react-toastify";
 
